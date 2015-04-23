@@ -2,122 +2,311 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ember Starter Kit</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <title>Codigo Jade</title>
+  <link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+  <link type="text/css" href="css/style.css" rel="stylesheet">
+  <link type ="text/css" href="css/font-awesome.min.css" rel="stylesheet">
+  <!--[if !IE 7]>
+  <style type="text/css">
+    #wrap {display:table;height:100%}
+  </style>
+  <![endif]-->
 </head>
 <body>
-
   <script type="text/x-handlebars">
-    <div class="navbar">
-      <div class="navbar-inner">
-        {{#link-to 'index' class='brand'}}Bloggr{{/link-to}}
-        <ul class="nav">
-          <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
-          <li>{{#link-to 'about'}}About{{/link-to}}</li>
-        </ul>
-      </div>
-    </div>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a href="#" class="brand"><img class="logo" src="images/icons/logo.png" alt=""></a>
+					<ul class="nav navs">
+            <li>{{#link-to 'services.service'}}Services{{/link-to}}</li>
+						<li>{{#link-to 'about'}}About Us{{/link-to}}</li>
+            <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+					</ul>
 
+          <ul class="nav navs">
+            <li><img id="cub" src="images/icons/fb.png"></li>
+            <li><img id="cub" src="images/icons/twitter.png"></li>
+            <li><img id="cub" src="images/icons/google.png"></li>
+            <li><img id="cub" src="images/icons/jade.png"></li>
+          </ul>
+			</div>
+		</div>
+      <div id="main">
     {{outlet}}
-  </script>
+      </div>
+      <footer class="footer-distributed">
 
-  <script type="text/x-handlebars" id="posts">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <table class='table'>
-            <thead>
-              <tr><th>Recent Posts</th></tr>
-            </thead>
-
-            <tbody>
-              {{#each model}}
-                <tr>
-                  <td>
-                    {{#link-to 'post' this}}{{title}} <small class='muted'>by {{author.name}}</small>{{/link-to}}
-                  </td>
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
+        <div class="footer-left">
+          <img src="images/icons/logo.png">
+          <p class="footer-links">
+            <!--<a href="#">'Home'</a>  ·
+            <a href="#">Blog</a>  ·
+            <a href="#">Pricing</a>  ·
+            <a href="#">About</a> ·
+            <a href="#">Faq</a>  ·
+            <a href="#">Contact</a>
+          </p>-->
+          <p class="footer-company-name">Codigo Jade &copy; 2009-2015</p>
         </div>
 
-        <div class="span9">
-          {{outlet}}
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>11 Some Street</span> City, State</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1 999 999 9999</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@codigojade.com</a></p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+
+      </footer>
+    <!--<div id="footer">
+    <div id="foot">
+      <p>Codigo Jade</p>
+      <p>About Us</p>
+      <p>Jobs</p>
+      <p>Opensource</p>
+    </div>
+
+    <div id="foot">
+      <p>Social Jade</p>
+      <p>Facebook</p>
+      <p>Twitter</p>
+      <p>Google Plus</p>
+    </div>
+
+    <div id="foot">
+      <p>Blog Jade</p>
+      <p>[lorem ipsum dolor sit amet, consectetur adipiscing]</p>
+      <p>[sit amet, consectetur adipiscing]</p>
+      <p>[lorem ipsum dolor sit amet, consectetur adipiscing]</p>
+    </div>
+
+    <div id="copy">
+      <p>© 2009-2015 Codigo Jade. All Rights Reserved.</p>
+    </div>
+  </div>-->
+	</script>
+
+  <!-- Services -->
+  <script type="text/x-handlebars" id="services">
+  <div>
+  {{outlet}}
+  </div>
+  <div id="test">
+    <div class="center">
+      <div class="slide">
+        <div>{{#link-to 'services.development'}}<img src="images/icons/1.png"></div>
+        <div id="txt"><p>Software Development{{/link-to}}</p></div>
+      </div>
+
+      <div class="slide">
+        <div>{{#link-to 'services.design'}}<img src="images/icons/2.png"></div>
+        <div id="txt"><p>Web Design{{/link-to}}</p></div>
+      </div>
+
+      <div class="slide">
+        <div>{{#link-to 'services.management'}}<img src="images/icons/3.png"></div>
+        <div id="txt"><p>Content Management{{/link-to}}</p></div>
+      </div>
+
+      <div class="slide">
+        <div>{{#link-to 'services.support'}}<img src="images/icons/4.png"></div>
+        <div id="txt"><p>Continuum Support{{/link-to}}</p></div>
+      </div>
+    </div>
+  </div>
+  </script>
+
+  <script type="text/x-handlebars" id="services/service">
+    <div id="containe">
+      <div id="sub-containe">
+        <h2 class="title">High Quality</h2>
+        <h3 class="subtitle">Software Design</h3>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="services/development">
+    <div id="container">
+      <div id="sub-container">
+        <div id="left">
+        <h2>Software Development</h2>
+        <h3>Do you have an idea? let us help you to get outside the box!</h3>
+        <p>We transform your idea into a fully functional web and mobile application designed to fit your personal need.</p>
+        </div>
+        <div id="right">
+          <img src="images/icons/12.png" alt="">
         </div>
       </div>
     </div>
   </script>
 
-  <script type="text/x-handlebars" id="posts/index">
-    <p class="text-warning">Please select a post</p>
-  </script>
-
-  <script type="text/x-handlebars" id="post">
-    {{#if isEditing}}
-      {{partial 'post/edit'}}
-      <button {{action 'doneEditing'}}>Done</button>
-    {{else}}
-      <button {{action 'edit'}}>Edit</button>
-    {{/if}}
-
-    <h1>{{title}}</h1>
-    <h2>by {{author.name}} <small class='muted'>({{format-date date}})</small></h2>
-
-    <hr>
-
-    <div class='intro'>
-      {{format-markdown excerpt}}
-    </div>
-
-    <div class='below-the-fold'>
-      {{format-markdown body}}
+  <script type="text/x-handlebars" id="services/design">
+    <div id="container">
+      <div id="sub-container">
+        <div id="left">
+        <h2>Web Design</h2>
+        <h3>Cutting edge design for your very own place</h3>
+        <p>We work to develop unique and fresh web sites that are easy fo the user to understand and navigate. Wheter is creating a new page from scrath or to makeover an existing one, our goal is to connect you whit your audience like never before.</p>
+      </div>
+        <div id="right">
+          <img src="images/icons/11.png" alt="">
+        </div>
+      </div>
     </div>
   </script>
 
-  <script type="text/x-handlebars" id="post/_edit">
-    <p>{{input type="text" value=title}}</p>
-    <p>{{input type="text" value=excerpt}}</p>
-    <p>{{textarea value=body}}</p>
+  <script type="text/x-handlebars" id="services/management">
+    <div id="container">
+      <div id="sub-container">
+        <div id="left">
+        <h2>Content Management</h2>
+        <h3>You don't need the IT guy to help you with your content</h3>
+        <p>Change your digital content easily without any risks, from text documents to multimedia files.</p>
+        </div>
+        <div id="right">
+          <img src="images/icons/10.png" alt="">
+        </div>
+      </div>
+    </div>
   </script>
 
+  <script type="text/x-handlebars" id="services/support">
+    <div id="container">
+      <div id="sub-container">
+        <div id="left">
+        <h2>Continuum support</h2>
+        <h3>We won't leave you alone at the end of the road</h3>
+        <p>Support and maintenance to all our final products guaranteed.</p>
+        </div>
+        <div id="right">
+          <img src="images/icons/9.png" alt="">
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <!-- About Us -->
   <script type="text/x-handlebars" id="about">
-    <div class='about'>
-      <p>
-        Yehuda Katz is a member of the <a href="http://emberjs.com">Ember.js</a>, <a href="http://rubyonrails.org">Ruby on Rails</a>
-        and <a href="http://www.jquery.com">jQuery</a> Core Teams; he spends his daytime hours at the startup he founded,
-        <a href="http://www.tilde.io">Tilde Inc.</a>.
-      </p>
-
-      <p>
-        Yehuda is co-author of best-selling <a href="http://affiliate.manning.com/idevaffiliate.php?id=485_176">jQuery in Action</a> and
-        <a href="http://affiliate.manning.com/idevaffiliate.php?id=485_145">Rails 3 in Action</a>.
-      </p>
-
-      <p>
-        He spends most of his time hacking on open source—his main projects, along with others, like <a href="https://github.com/wycats/thor">Thor</a>,
-        <a href="http://www.handlebarsjs.com">Handlebars</a> and <a href="https://github.com/carlhuda/janus">Janus</a>—or traveling the world doing evangelism work.
-      </p>
-
-      <p>He can be found on Twitter as <a href="http://www.twitter.com/wycats">@wycats</a>.</p>
+    <h2>Made of Jade</h2>
+    <p> we're a small group of passionate web and mobile software developers, who likes to work hand by hand with flexibility and efficiency. building things that can bring joy and usability to the people who use them is what we love to do!</p>
+    <div>
+      <a href="#"><img id="developer" src="images/icons/perfil.gif"/></a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
     </div>
-
-    <div class='about'>
-      <p>My name is Tom Dale. I helped create <a href="http://www.emberjs.com/">Ember.js</a>, a JavaScript framework that brings sanity to the web.</p>
-
-      <p>In October of 2011, I co-founded <a href="http://www.tilde.io">Tilde</a> with Yehuda Katz, Leah Silber and Carl Lerche.</p>
-
-      <p>In my spare time I run a cash-for-beer exchange program at many local San Francisco dive bars.</p>
+    <div>
+      <a href="#"><img id="developer" src="images/icons/perfil.gif"/></a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen19.png" onmouseover="this.src='images/color/Imagen16.png'" onmouseout="this.src='images/blank/Imagen19.png'" /></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen18.png"  onmouseover="this.src='images/color/Imagen13.png'" onmouseout="this.src='images/blank/Imagen18.png'" /></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen15.png"  onmouseover="this.src='images/color/Imagen19.png'" onmouseout="this.src='images/blank/Imagen15.png'"/></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen12.png"  onmouseover="this.src='images/color/Imagen10.png'" onmouseout="this.src='images/blank/Imagen12.png'"/></a>
+    </div>
+ 		<div>
+      <a href="#"><img src="images/blank/Imagen7.png"  onmouseover="this.src='images/color/Imagen7.png'" onmouseout="this.src='images/blank/Imagen7.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen6.png"  onmouseover="this.src='images/color/Imagen4.png'" onmouseout="this.src='images/blank/Imagen6.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen1.png"  onmouseover="this.src='images/color/Imagen1.png'" onmouseout="this.src='images/blank/Imagen1.png'"/></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen20.png" onmouseover="this.src='images/color/Imagen17.png'" onmouseout="this.src='images/blank/Imagen20.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen17.png" onmouseover="this.src='images/color/Imagen14.png'" onmouseout="this.src='images/blank/Imagen17.png'"/></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen14.png" onmouseover="this.src='images/color/Imagen20.png'" onmouseout="this.src='images/blank/Imagen14.png'"/></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen11.png" onmouseover="this.src='images/color/Imagen11.png'" onmouseout="this.src='images/blank/Imagen11.png'"/></a>
+    </div>
+   	<div>
+      <a href="#"><img src="images/blank/Imagen8.png" onmouseover="this.src='images/color/Imagen8.png'" onmouseout="this.src='images/blank/Imagen8.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen4.png" onmouseover="this.src='images/color/Imagen5.png'" onmouseout="this.src='images/blank/Imagen4.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen2.png" onmouseover="this.src='images/color/Imagen2.png'" onmouseout="this.src='images/blank/Imagen2.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen21.png" onmouseover="this.src='images/color/Imagen18.png'" onmouseout="this.src='images/blank/Imagen21.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen16.png" onmouseover="this.src='images/color/Imagen15.png'" onmouseout="this.src='images/blank/Imagen16.png'"/></a>
+    </div>
+    <div>
+      <a href="#"><img src="images/blank/Imagen13.png" onmouseover="this.src='images/color/Imagen21.png'" onmouseout="this.src='images/blank/Imagen13.png'"/></a>
+    </div>
+   	<div>
+      <a href="#"><img src="images/blank/Imagen10.png" onmouseover="this.src='images/color/Imagen12.png'" onmouseout="this.src='images/blank/Imagen10.png'"/></a>
+    </div>
+  	<div>
+      <a href="#"><img src="images/blank/Imagen9.png" onmouseover="this.src='images/color/Imagen9.png'" onmouseout="this.src='images/blank/Imagen9.png'"/></a>
+    </div>
+	  <div>
+      <a href="#"><img src="images/blank/Imagen5.png" onmouseover="this.src='images/color/Imagen6.png'"	onmouseout="this.src='images/blank/Imagen5.png'"/></a>
+    </div>
+	  <div>
+      <a href="#"><img src="images/blank/Imagen3.png" onmouseover="this.src='images/color/Imagen3.png'"	onmouseout="this.src='images/blank/Imagen3.png'"/></a>
     </div>
   </script>
 
+  <!-- Contact -->
+  <script type="text/x-handlebars" id="contact">
+    <h2>Jade's secret base</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+
+    <h2>Want to hire us?</h2>
+    <p>Name</p>
+    <p>Mail</p>
+    <p>Project</p>
+    <p>Submit</p>
+  </script>
+  <!-- El nucleo :3 -->
   <script src="js/libs/jquery-v1.11.1.js"></script>
   <script src="js/libs/handlebars-v1.3.0.js"></script>
-  <script src="js/libs/ember-v1.6.1.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+  <script src="js/libs/ember.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/parallax/demo.js"></script>
+  <script src="js/parallax/jquery.parallax-scroll.js"></script>
+  <script src="js/jQuery.scrollSpeed.js"></script>
+  <script src="jquery.parallax-scroll.js"> </script>
+  <script type="text/javascript">
+  $('#test').parallaxScroll({
+      friction: 0.5
+  });
+  </script>
 </body>
 </html>

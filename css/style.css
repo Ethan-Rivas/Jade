@@ -1,4 +1,307 @@
-/* Put your CSS here */
+*{
+  text-decoration: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 90px;
+}
+
+.navs {
+  padding-top: 10px;
+}
+
+#test{
+  background-image: url('../images/test.jpg');
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+}
+
+.center{
+  width: 80%;
+  height: 700px;
+  margin: auto;
+}
+
+.slide{
+  display: inline-block;
+  margin-left: 7%;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 120%;
+}
+
+#txt{
+  padding-top: 10px;
+  color: white;
+}
+
+div div#sub-container h2{
+  color: white;
+  font-size: 60px;
+}
+
+div div#sub-container h3{
+  color: white;
+  font-size: 30px;
+  font-style: italic;
+}
+
+div div#sub-container p{
+  font-size: 20px;
+  color: white;
+}
+
+#container{
+  width: 100%;
+  height: 250px;
+  background-color: #414141;
+  margin: auto;
+  position: relative;
+}
+
+#sub-container{
+  width: 97%;
+  height: 212px;
+  background-color: #ffffff;
+  background-image: url('../images/first.jpg');
+  background-size: 100% 210%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 18px;
+  position: relative;
+}
+
+#containe{
+  width: 100%;
+  height: 250px;
+  background-color: #414141;
+  margin: auto;
+  position: relative;
+}
+
+#sub-containe{
+  width: 97%;
+  height: 212px;
+  background-color: #ffffff;
+  background-image: url('../images/first.jpg');
+  background-size: 100% 210%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: 18px;
+  position: relative;
+}
+
+.title{
+  margin: 40px auto;
+  font-size: 90px;
+  color: white;
+  text-align: center;
+}
+
+.subtitle{
+  margin: 50px auto;
+  font-size: 90px;
+  color: white;
+  text-align: center;
+}
+
+#right{
+  float: right;
+}
+
+#left{
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;
+  width: 73%;
+}
+
+ /* testing shits */
+
 html, body {
-    margin: 20px;
+  height: 100%;
+}
+
+#main {
+  overflow: hidden;
+}
+
+.footer-distributed{
+	background-color: #292c2f ;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  white;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+  margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/* test */
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
 }
